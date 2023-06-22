@@ -1,0 +1,22 @@
+@startuml RegistroCaso
+skinparam defaultFontName Arial
+
+title Registro Caso (HCE)
+hide footbox
+participant "HCE" as Sender
+participant "REG" as Receiver
+group Registro de Caso
+"Sender" --> "Receiver" : POST [url_nom]/Bundle body:[[StructureDefinition-RegistroCaso.html]]
+"Receiver" -> "Sender" : response (201 OK) 
+end
+
+title Registro Tratamiento (HCE)
+hide footbox
+participant "HCE" as Sender
+participant "REG" as Receiver
+group Registro de Tratamiento
+"Sender" --> "Receiver" : POST [url_nom]/Bundle body:[[StructureDefinition-RegistroTratamiento.html]]
+"Receiver" -> "Sender" : response (201 OK) 
+end
+
+@enduml

@@ -1,0 +1,13 @@
+@startuml RegistroSituacionVital
+skinparam defaultFontName Arial
+
+title Registro de Situación Vital (VIT)
+hide footbox
+participant "HCE" as Sender
+participant "REG" as Receiver
+group Registro de Caso
+"Sender" --> "Receiver" : POST [url_nom]/Bundle body:[[StructureDefinition-RegistroSituacionVital.html]]
+"Receiver" -> "Sender" : response (201 OK) 
+end
+
+@enduml
